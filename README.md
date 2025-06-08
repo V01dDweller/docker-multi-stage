@@ -14,7 +14,7 @@ RUN apk add bash \
             gcc \
             git \
             make \
-            ncurses-dev 
+            ncurses-dev
 RUN git clone --depth 1 https://github.com/vim/vim.git
 WORKDIR /usr/src/vim
 RUN ./configure
