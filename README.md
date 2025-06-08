@@ -9,12 +9,12 @@ This project demonstrates how to use Docker's multi-stage build feature to creat
 FROM alpine:latest AS builder
 RUN mkdir -pv /usr/src
 WORKDIR /usr/src
-RUN apk add clang \
+RUN apk add bash \
+            clang \
             gcc \
             git \
-            ncurses-dev \
             make \
-            bash
+            ncurses-dev 
 RUN git clone --depth 1 https://github.com/vim/vim.git
 WORKDIR /usr/src/vim
 RUN ./configure
