@@ -1,0 +1,570 @@
+root@083f149e7348:/usr/src/vim# make install
+Starting make in the src directory.
+If there are problems, cd to the src directory and run make there
+cd src && make install
+make[1]: Entering directory '/usr/src/vim/src'
+if test -f /usr/local/bin/vim; then \
+  mv -f /usr/local/bin/vim /usr/local/bin/vim.rm; \
+  rm -f /usr/local/bin/vim.rm; \
+fi
+cp vim /usr/local/bin
+strip /usr/local/bin/vim
+chmod 755 /usr/local/bin/vim
+cp vimtutor /usr/local/bin/vimtutor
+chmod 755 /usr/local/bin/vimtutor
+/bin/sh install-sh -c -d /usr/local/share/vim
+chmod 755 /usr/local/share/vim
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91
+chmod 755 /usr/local/share/vim/vim91
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/doc
+chmod 755 /usr/local/share/vim/vim91/doc
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/print
+chmod 755 /usr/local/share/vim/vim91/print
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/colors
+chmod 755 /usr/local/share/vim/vim91/colors
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/syntax
+chmod 755 /usr/local/share/vim/vim91/syntax
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/syntax/modula2
+chmod 755 /usr/local/share/vim/vim91/syntax/modula2
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/syntax/modula2/opt
+chmod 755 /usr/local/share/vim/vim91/syntax/modula2/opt
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/syntax/shared
+chmod 755 /usr/local/share/vim/vim91/syntax/shared
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/indent
+chmod 755 /usr/local/share/vim/vim91/indent
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/ftplugin
+chmod 755 /usr/local/share/vim/vim91/ftplugin
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/autoload
+chmod 755 /usr/local/share/vim/vim91/autoload
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/autoload/dist
+chmod 755 /usr/local/share/vim/vim91/autoload/dist
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/autoload/xml
+chmod 755 /usr/local/share/vim/vim91/autoload/xml
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/autoload/rust
+chmod 755 /usr/local/share/vim/vim91/autoload/rust
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/autoload/cargo
+chmod 755 /usr/local/share/vim/vim91/autoload/cargo
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/import
+chmod 755 /usr/local/share/vim/vim91/import
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/import/dist
+chmod 755 /usr/local/share/vim/vim91/import/dist
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/plugin
+chmod 755 /usr/local/share/vim/vim91/plugin
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tutor
+chmod 755 /usr/local/share/vim/vim91/tutor
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tutor/en
+chmod 755 /usr/local/share/vim/vim91/tutor/en
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tutor/it
+chmod 755 /usr/local/share/vim/vim91/tutor/it
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tutor/sr
+chmod 755 /usr/local/share/vim/vim91/tutor/sr
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tutor/ru
+chmod 755 /usr/local/share/vim/vim91/tutor/ru
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/spell
+chmod 755 /usr/local/share/vim/vim91/spell
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/compiler
+chmod 755 /usr/local/share/vim/vim91/compiler
+/bin/sh ./installman.sh install /usr/local/share/man/man1 "" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/man1
+installing /usr/local/share/man/man1/vim.1
+installing /usr/local/share/man/man1/vimtutor.1
+installing /usr/local/share/man/man1/vimdiff.1
+installing /usr/local/share/man/man1/evim.1
+cd ../runtime/doc; if test -z "" -a -f tags; then \
+        mv -f tags tags.dist; fi
+generating help tags
+make[2]: Entering directory '/usr/src/vim/runtime/doc'
+cp ../pack/dist/opt/netrw/doc/netrw.txt pi_netrw.txt.tmp
+sed -e '1s/$/   *pi_netrw.txt*/' pi_netrw.txt.tmp > pi_netrw.txt && \
+rm -f pi_netrw.txt.tmp
+help tags updated
+make[2]: Leaving directory '/usr/src/vim/runtime/doc'
+cd ../runtime/doc; \
+        files=`ls *.txt tags`; \
+        files="$files `ls *.??x tags-?? 2>/dev/null || true`"; \
+        cp $files  /usr/local/share/vim/vim91/doc; \
+        cd /usr/local/share/vim/vim91/doc; \
+        chmod 644 $files
+cp  ../runtime/doc/*.pl /usr/local/share/vim/vim91/doc
+chmod 755 /usr/local/share/vim/vim91/doc/*.pl
+cd ../runtime/doc; if test -f tags.dist; then mv -f tags.dist tags; fi
+cp ../runtime/menu.vim /usr/local/share/vim/vim91/menu.vim
+chmod 644 /usr/local/share/vim/vim91/menu.vim
+cp ../runtime/synmenu.vim /usr/local/share/vim/vim91/synmenu.vim
+chmod 644 /usr/local/share/vim/vim91/synmenu.vim
+cp ../runtime/delmenu.vim /usr/local/share/vim/vim91/delmenu.vim
+chmod 644 /usr/local/share/vim/vim91/delmenu.vim
+cp ../runtime/defaults.vim /usr/local/share/vim/vim91/defaults.vim
+chmod 644 /usr/local/share/vim/vim91/defaults.vim
+cp ../runtime/evim.vim /usr/local/share/vim/vim91/evim.vim
+chmod 644 /usr/local/share/vim/vim91/evim.vim
+cp ../runtime/mswin.vim /usr/local/share/vim/vim91/mswin.vim
+chmod 644 /usr/local/share/vim/vim91/mswin.vim
+cp ../runtime/bugreport.vim /usr/local/share/vim/vim91/bugreport.vim
+chmod 644 /usr/local/share/vim/vim91/bugreport.vim
+cp ../runtime/vimrc_example.vim /usr/local/share/vim/vim91
+chmod 644 /usr/local/share/vim/vim91/vimrc_example.vim
+cp ../runtime/gvimrc_example.vim /usr/local/share/vim/vim91
+chmod 644 /usr/local/share/vim/vim91/gvimrc_example.vim
+cp ../runtime/filetype.vim /usr/local/share/vim/vim91/filetype.vim
+chmod 644 /usr/local/share/vim/vim91/filetype.vim
+cp ../runtime/ftoff.vim /usr/local/share/vim/vim91/ftoff.vim
+chmod 644 /usr/local/share/vim/vim91/ftoff.vim
+cp ../runtime/scripts.vim /usr/local/share/vim/vim91/scripts.vim
+chmod 644 /usr/local/share/vim/vim91/scripts.vim
+cp ../runtime/ftplugin.vim /usr/local/share/vim/vim91/ftplugin.vim
+chmod 644 /usr/local/share/vim/vim91/ftplugin.vim
+cp ../runtime/ftplugof.vim /usr/local/share/vim/vim91/ftplugof.vim
+chmod 644 /usr/local/share/vim/vim91/ftplugof.vim
+cp ../runtime/indent.vim /usr/local/share/vim/vim91/indent.vim
+chmod 644 /usr/local/share/vim/vim91/indent.vim
+cp ../runtime/indoff.vim /usr/local/share/vim/vim91/indoff.vim
+chmod 644 /usr/local/share/vim/vim91/indoff.vim
+cp ../runtime/optwin.vim /usr/local/share/vim/vim91/optwin.vim
+chmod 644 /usr/local/share/vim/vim91/optwin.vim
+cp ../README.txt /usr/local/share/vim/vim91
+chmod 644 /usr/local/share/vim/vim91/README.txt
+cp ../LICENSE /usr/local/share/vim/vim91
+chmod 644 /usr/local/share/vim/vim91/LICENSE
+cd ../runtime/print; cp *.ps /usr/local/share/vim/vim91/print
+cd /usr/local/share/vim/vim91/print; chmod 644 *.ps
+cd ../runtime/colors; cp -r *.vim lists tools README.txt /usr/local/share/vim/vim91/colors
+cd /usr/local/share/vim/vim91/colors; chmod 755 lists tools
+cd /usr/local/share/vim/vim91/colors; chmod 644 *.vim README.txt lists/*.vim tools/*.vim
+cd ../runtime/syntax; cp *.vim README.txt /usr/local/share/vim/vim91/syntax
+cd /usr/local/share/vim/vim91/syntax; chmod 644 *.vim README.txt
+cd ../runtime/syntax/shared; cp *.vim README.txt /usr/local/share/vim/vim91/syntax/shared
+cd /usr/local/share/vim/vim91/syntax/shared; chmod 644 *.vim README.txt
+cd ../runtime/syntax/modula2/opt; cp *.vim /usr/local/share/vim/vim91/syntax/modula2/opt
+cd /usr/local/share/vim/vim91/syntax/modula2/opt; chmod 644 *.vim
+cd ../runtime/indent; cp *.vim README.txt /usr/local/share/vim/vim91/indent
+cd /usr/local/share/vim/vim91/indent; chmod 644 *.vim README.txt
+cd ../runtime/autoload; cp *.vim README.txt /usr/local/share/vim/vim91/autoload
+cd /usr/local/share/vim/vim91/autoload; chmod 644 *.vim README.txt
+cd ../runtime/autoload/dist; cp *.vim /usr/local/share/vim/vim91/autoload/dist
+cd /usr/local/share/vim/vim91/autoload/dist; chmod 644 *.vim
+cd ../runtime/autoload/xml; cp *.vim /usr/local/share/vim/vim91/autoload/xml
+cd /usr/local/share/vim/vim91/autoload/xml; chmod 644 *.vim
+cd ../runtime/autoload/cargo; cp *.vim /usr/local/share/vim/vim91/autoload/cargo
+cd /usr/local/share/vim/vim91/autoload/cargo; chmod 644 *.vim
+cd ../runtime/autoload/rust; cp *.vim /usr/local/share/vim/vim91/autoload/rust
+cd /usr/local/share/vim/vim91/autoload/rust; chmod 644 *.vim
+cd ../runtime/import/dist; cp *.vim /usr/local/share/vim/vim91/import/dist
+cd /usr/local/share/vim/vim91/import/dist; chmod 644 *.vim
+cd ../runtime/plugin; cp *.vim README.txt /usr/local/share/vim/vim91/plugin
+cd /usr/local/share/vim/vim91/plugin; chmod 644 *.vim README.txt
+cd ../runtime/ftplugin; cp *.vim README.txt logtalk.dict /usr/local/share/vim/vim91/ftplugin
+cd /usr/local/share/vim/vim91/ftplugin; chmod 644 *.vim README.txt logtalk.dict
+cd ../runtime/compiler; cp *.vim README.txt /usr/local/share/vim/vim91/compiler
+cd /usr/local/share/vim/vim91/compiler; chmod 644 *.vim README.txt
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/macros
+chmod 755 /usr/local/share/vim/vim91/macros
+cp -r ../runtime/macros/* /usr/local/share/vim/vim91/macros
+chmod 755 `find /usr/local/share/vim/vim91/macros -type d -print`
+chmod 644 `find /usr/local/share/vim/vim91/macros -type f -print`
+chmod 755 /usr/local/share/vim/vim91/macros/less.sh
+cvs=`find /usr/local/share/vim/vim91/macros \( -name CVS -o -name AAPDIR -o -name "*.info" \) -print`; \
+      if test -n "$cvs"; then \
+         rm -rf $cvs; \
+      fi
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/pack
+chmod 755 /usr/local/share/vim/vim91/pack
+cp -r ../runtime/pack/* /usr/local/share/vim/vim91/pack
+chmod 755 `find /usr/local/share/vim/vim91/pack -type d -print`
+chmod 644 `find /usr/local/share/vim/vim91/pack -type f -print`
+cp ../runtime/tutor/README* ../runtime/tutor/tutor* /usr/local/share/vim/vim91/tutor
+cp ../runtime/tutor/en/* /usr/local/share/vim/vim91/tutor/en/
+cp ../runtime/tutor/it/* /usr/local/share/vim/vim91/tutor/it/
+cp ../runtime/tutor/ru/* /usr/local/share/vim/vim91/tutor/ru/
+cp ../runtime/tutor/sr/* /usr/local/share/vim/vim91/tutor/sr/
+rm -f /usr/local/share/vim/vim91/tutor/*.info
+chmod 644 /usr/local/share/vim/vim91/tutor/*
+chmod 755 /usr/local/share/vim/vim91/tutor/en
+chmod 755 /usr/local/share/vim/vim91/tutor/it
+chmod 755 /usr/local/share/vim/vim91/tutor/ru
+chmod 755 /usr/local/share/vim/vim91/tutor/sr
+if test -f ../runtime/spell/en.latin1.spl; then \
+  cp ../runtime/spell/*.spl ../runtime/spell/*.sug ../runtime/spell/*.vim /usr/local/share/vim/vim91/spell; \
+  chmod 644 /usr/local/share/vim/vim91/spell/*.spl /usr/local/share/vim/vim91/spell/*.sug /usr/local/share/vim/vim91/spell/*.vim; \
+fi
+cd /usr/local/bin; ln -s vim ex
+cd /usr/local/bin; ln -s vim view
+cd /usr/local/bin; ln -s vim rvim
+cd /usr/local/bin; ln -s vim rview
+cd /usr/local/bin; ln -s vim vimdiff
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/man1/ex.1
+creating link /usr/local/share/man/man1/view.1
+creating link /usr/local/share/man/man1/rvim.1
+creating link /usr/local/share/man/man1/rview.1
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/tools
+chmod 755 /usr/local/share/vim/vim91/tools
+/bin/sh ./installman.sh xxd /usr/local/share/man/da/man1 "-da" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/da/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/da.ISO8859-1/man1 "-da" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/da.ISO8859-1/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/da.UTF-8/man1 "-da.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/da.UTF-8/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/de/man1 "-de" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/de/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/de.ISO8859-1/man1 "-de" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/de.ISO8859-1/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/de.UTF-8/man1 "-de.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/de.UTF-8/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/fr/man1 "-fr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/fr/man1
+installing /usr/local/share/man/fr/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/fr.ISO8859-1/man1 "-fr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/fr.ISO8859-1/man1
+installing /usr/local/share/man/fr.ISO8859-1/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/fr.UTF-8/man1 "-fr.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/fr.UTF-8/man1
+installing /usr/local/share/man/fr.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/it/man1 "-it" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/it/man1
+installing /usr/local/share/man/it/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/it.ISO8859-1/man1 "-it" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/it.ISO8859-1/man1
+installing /usr/local/share/man/it.ISO8859-1/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/it.UTF-8/man1 "-it.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/it.UTF-8/man1
+installing /usr/local/share/man/it.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/ja/man1 "-ja.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/ja/man1
+installing /usr/local/share/man/ja/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/pl/man1 "-pl" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/pl/man1
+installing /usr/local/share/man/pl/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/pl.ISO8859-2/man1 "-pl" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/pl.ISO8859-2/man1
+installing /usr/local/share/man/pl.ISO8859-2/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/pl.UTF-8/man1 "-pl.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/pl.UTF-8/man1
+installing /usr/local/share/man/pl.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/ru.KOI8-R/man1 "-ru" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/ru.KOI8-R/man1
+installing /usr/local/share/man/ru.KOI8-R/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/ru.UTF-8/man1 "-ru.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/ru.UTF-8/man1
+installing /usr/local/share/man/ru.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /usr/local/share/man/tr/man1 "-tr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/tr/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/tr.ISO8859-9/man1 "-tr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/tr.ISO8859-9/man1
+/bin/sh ./installman.sh xxd /usr/local/share/man/tr.UTF-8/man1 "-tr.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /usr/local/share/man/tr.UTF-8/man1
+if test -f /usr/local/bin/xxd; then \
+  mv -f /usr/local/bin/xxd /usr/local/bin/xxd.rm; \
+  rm -f /usr/local/bin/xxd.rm; \
+fi
+cp xxd/xxd /usr/local/bin
+strip /usr/local/bin/xxd
+chmod 755 /usr/local/bin/xxd
+/bin/sh ./installman.sh xxd /usr/local/share/man/man1 "" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/man1/xxd.1
+cp -r ../runtime/tools/* /usr/local/share/vim/vim91/tools
+cvs=`find /usr/local/share/vim/vim91/tools \( -name CVS -o -name AAPDIR \) -print`; \
+      if test -n "$cvs"; then \
+         rm -rf $cvs; \
+      fi
+chmod 644 /usr/local/share/vim/vim91/tools/*
+perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$perlpath+" ../runtime/tools/efm_perl.pl >/usr/local/share/vim/vim91/tools/efm_perl.pl
+awkpath=`./which.sh nawk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/usr/local/share/vim/vim91/tools/mve.awk; if test -z "$awkpath"; then \
+        awkpath=`./which.sh gawk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/usr/local/share/vim/vim91/tools/mve.awk; if test -z "$awkpath"; then \
+        awkpath=`./which.sh awk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/usr/local/share/vim/vim91/tools/mve.awk; fi; fi
+chmod 755 `grep -l "^#!" /usr/local/share/vim/vim91/tools/*`
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/lang
+chmod 755 /usr/local/share/vim/vim91/lang
+/bin/sh install-sh -c -d /usr/local/share/vim/vim91/keymap
+chmod 755 /usr/local/share/vim/vim91/keymap
+/bin/sh ./installman.sh install /usr/local/share/man/da/man1 "-da" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/da/man1/vim.1
+installing /usr/local/share/man/da/man1/vimtutor.1
+installing /usr/local/share/man/da/man1/vimdiff.1
+/bin/sh ./installman.sh install /usr/local/share/man/da.ISO8859-1/man1 "-da" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/da.ISO8859-1/man1/vim.1
+installing /usr/local/share/man/da.ISO8859-1/man1/vimtutor.1
+installing /usr/local/share/man/da.ISO8859-1/man1/vimdiff.1
+/bin/sh ./installman.sh install /usr/local/share/man/da.UTF-8/man1 "-da.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/da.UTF-8/man1/vim.1
+installing /usr/local/share/man/da.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/da.UTF-8/man1/vimdiff.1
+/bin/sh ./installman.sh install /usr/local/share/man/de/man1 "-de" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/de/man1/vim.1
+/bin/sh ./installman.sh install /usr/local/share/man/de.ISO8859-1/man1 "-de" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/de.ISO8859-1/man1/vim.1
+/bin/sh ./installman.sh install /usr/local/share/man/de.UTF-8/man1 "-de.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/de.UTF-8/man1/vim.1
+/bin/sh ./installman.sh install /usr/local/share/man/fr/man1 "-fr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/fr/man1/vim.1
+installing /usr/local/share/man/fr/man1/vimtutor.1
+installing /usr/local/share/man/fr/man1/vimdiff.1
+installing /usr/local/share/man/fr/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/fr.ISO8859-1/man1 "-fr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/fr.ISO8859-1/man1/vim.1
+installing /usr/local/share/man/fr.ISO8859-1/man1/vimtutor.1
+installing /usr/local/share/man/fr.ISO8859-1/man1/vimdiff.1
+installing /usr/local/share/man/fr.ISO8859-1/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/fr.UTF-8/man1 "-fr.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/fr.UTF-8/man1/vim.1
+installing /usr/local/share/man/fr.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/fr.UTF-8/man1/vimdiff.1
+installing /usr/local/share/man/fr.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/it/man1 "-it" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/it/man1/vim.1
+installing /usr/local/share/man/it/man1/vimtutor.1
+installing /usr/local/share/man/it/man1/vimdiff.1
+installing /usr/local/share/man/it/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/it.ISO8859-1/man1 "-it" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/it.ISO8859-1/man1/vim.1
+installing /usr/local/share/man/it.ISO8859-1/man1/vimtutor.1
+installing /usr/local/share/man/it.ISO8859-1/man1/vimdiff.1
+installing /usr/local/share/man/it.ISO8859-1/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/it.UTF-8/man1 "-it.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/it.UTF-8/man1/vim.1
+installing /usr/local/share/man/it.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/it.UTF-8/man1/vimdiff.1
+installing /usr/local/share/man/it.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/ja/man1 "-ja.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/ja/man1/vim.1
+installing /usr/local/share/man/ja/man1/vimtutor.1
+installing /usr/local/share/man/ja/man1/vimdiff.1
+installing /usr/local/share/man/ja/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/pl/man1 "-pl" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/pl/man1/vim.1
+installing /usr/local/share/man/pl/man1/vimtutor.1
+installing /usr/local/share/man/pl/man1/vimdiff.1
+installing /usr/local/share/man/pl/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/pl.ISO8859-2/man1 "-pl" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/pl.ISO8859-2/man1/vim.1
+installing /usr/local/share/man/pl.ISO8859-2/man1/vimtutor.1
+installing /usr/local/share/man/pl.ISO8859-2/man1/vimdiff.1
+installing /usr/local/share/man/pl.ISO8859-2/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/pl.UTF-8/man1 "-pl.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/pl.UTF-8/man1/vim.1
+installing /usr/local/share/man/pl.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/pl.UTF-8/man1/vimdiff.1
+installing /usr/local/share/man/pl.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/ru.KOI8-R/man1 "-ru" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/ru.KOI8-R/man1/vim.1
+installing /usr/local/share/man/ru.KOI8-R/man1/vimtutor.1
+installing /usr/local/share/man/ru.KOI8-R/man1/vimdiff.1
+installing /usr/local/share/man/ru.KOI8-R/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/ru.UTF-8/man1 "-ru.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/ru.UTF-8/man1/vim.1
+installing /usr/local/share/man/ru.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/ru.UTF-8/man1/vimdiff.1
+installing /usr/local/share/man/ru.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/tr/man1 "-tr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/tr/man1/vim.1
+installing /usr/local/share/man/tr/man1/vimtutor.1
+installing /usr/local/share/man/tr/man1/vimdiff.1
+installing /usr/local/share/man/tr/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/tr.ISO8859-9/man1 "-tr" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/tr.ISO8859-9/man1/vim.1
+installing /usr/local/share/man/tr.ISO8859-9/man1/vimtutor.1
+installing /usr/local/share/man/tr.ISO8859-9/man1/vimdiff.1
+installing /usr/local/share/man/tr.ISO8859-9/man1/evim.1
+/bin/sh ./installman.sh install /usr/local/share/man/tr.UTF-8/man1 "-tr.UTF-8" /usr/local/share/vim /usr/local/share/vim/vim91 /usr/local/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /usr/local/share/man/tr.UTF-8/man1/vim.1
+installing /usr/local/share/man/tr.UTF-8/man1/vimtutor.1
+installing /usr/local/share/man/tr.UTF-8/man1/vimdiff.1
+installing /usr/local/share/man/tr.UTF-8/man1/evim.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/da/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/da/man1/ex.1
+creating link /usr/local/share/man/da/man1/view.1
+creating link /usr/local/share/man/da/man1/rvim.1
+creating link /usr/local/share/man/da/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/da.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/da.ISO8859-1/man1/ex.1
+creating link /usr/local/share/man/da.ISO8859-1/man1/view.1
+creating link /usr/local/share/man/da.ISO8859-1/man1/rvim.1
+creating link /usr/local/share/man/da.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/da.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/da.UTF-8/man1/ex.1
+creating link /usr/local/share/man/da.UTF-8/man1/view.1
+creating link /usr/local/share/man/da.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/da.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/de/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/de/man1/ex.1
+creating link /usr/local/share/man/de/man1/view.1
+creating link /usr/local/share/man/de/man1/rvim.1
+creating link /usr/local/share/man/de/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/de.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/de.ISO8859-1/man1/ex.1
+creating link /usr/local/share/man/de.ISO8859-1/man1/view.1
+creating link /usr/local/share/man/de.ISO8859-1/man1/rvim.1
+creating link /usr/local/share/man/de.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/de.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/de.UTF-8/man1/ex.1
+creating link /usr/local/share/man/de.UTF-8/man1/view.1
+creating link /usr/local/share/man/de.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/de.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/fr/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/fr/man1/ex.1
+creating link /usr/local/share/man/fr/man1/view.1
+creating link /usr/local/share/man/fr/man1/rvim.1
+creating link /usr/local/share/man/fr/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/fr.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/fr.ISO8859-1/man1/ex.1
+creating link /usr/local/share/man/fr.ISO8859-1/man1/view.1
+creating link /usr/local/share/man/fr.ISO8859-1/man1/rvim.1
+creating link /usr/local/share/man/fr.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/fr.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/fr.UTF-8/man1/ex.1
+creating link /usr/local/share/man/fr.UTF-8/man1/view.1
+creating link /usr/local/share/man/fr.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/fr.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/it/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/it/man1/ex.1
+creating link /usr/local/share/man/it/man1/view.1
+creating link /usr/local/share/man/it/man1/rvim.1
+creating link /usr/local/share/man/it/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/it.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/it.ISO8859-1/man1/ex.1
+creating link /usr/local/share/man/it.ISO8859-1/man1/view.1
+creating link /usr/local/share/man/it.ISO8859-1/man1/rvim.1
+creating link /usr/local/share/man/it.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/it.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/it.UTF-8/man1/ex.1
+creating link /usr/local/share/man/it.UTF-8/man1/view.1
+creating link /usr/local/share/man/it.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/it.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/ja/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/ja/man1/ex.1
+creating link /usr/local/share/man/ja/man1/view.1
+creating link /usr/local/share/man/ja/man1/rvim.1
+creating link /usr/local/share/man/ja/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/pl/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/pl/man1/ex.1
+creating link /usr/local/share/man/pl/man1/view.1
+creating link /usr/local/share/man/pl/man1/rvim.1
+creating link /usr/local/share/man/pl/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/pl.ISO8859-2/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/pl.ISO8859-2/man1/ex.1
+creating link /usr/local/share/man/pl.ISO8859-2/man1/view.1
+creating link /usr/local/share/man/pl.ISO8859-2/man1/rvim.1
+creating link /usr/local/share/man/pl.ISO8859-2/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/pl.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/pl.UTF-8/man1/ex.1
+creating link /usr/local/share/man/pl.UTF-8/man1/view.1
+creating link /usr/local/share/man/pl.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/pl.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/ru.KOI8-R/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/ru.KOI8-R/man1/ex.1
+creating link /usr/local/share/man/ru.KOI8-R/man1/view.1
+creating link /usr/local/share/man/ru.KOI8-R/man1/rvim.1
+creating link /usr/local/share/man/ru.KOI8-R/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/ru.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/ru.UTF-8/man1/ex.1
+creating link /usr/local/share/man/ru.UTF-8/man1/view.1
+creating link /usr/local/share/man/ru.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/ru.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/tr/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/tr/man1/ex.1
+creating link /usr/local/share/man/tr/man1/view.1
+creating link /usr/local/share/man/tr/man1/rvim.1
+creating link /usr/local/share/man/tr/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/tr.ISO8859-9/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/tr.ISO8859-9/man1/ex.1
+creating link /usr/local/share/man/tr.ISO8859-9/man1/view.1
+creating link /usr/local/share/man/tr.ISO8859-9/man1/rvim.1
+creating link /usr/local/share/man/tr.ISO8859-9/man1/rview.1
+/bin/sh ./installml.sh install "" \
+        /usr/local/share/man/tr.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /usr/local/share/man/tr.UTF-8/man1/ex.1
+creating link /usr/local/share/man/tr.UTF-8/man1/view.1
+creating link /usr/local/share/man/tr.UTF-8/man1/rvim.1
+creating link /usr/local/share/man/tr.UTF-8/man1/rview.1
+if test -n "" -a -f po/Makefile; then \
+   cd po; make prefix=/usr/local LOCALEDIR=/usr/local/share/vim/vim91/lang \
+   INSTALL_DATA=cp FILEMOD=644 install; \
+fi
+if test -d ../runtime/lang; then \
+   cp ../runtime/lang/README.txt ../runtime/lang/*.vim /usr/local/share/vim/vim91/lang; \
+   chmod 644 /usr/local/share/vim/vim91/lang/README.txt /usr/local/share/vim/vim91/lang/*.vim; \
+fi
+if test -d ../runtime/keymap; then \
+   cp ../runtime/keymap/README.txt ../runtime/keymap/*.vim /usr/local/share/vim/vim91/keymap; \
+   chmod 644 /usr/local/share/vim/vim91/keymap/README.txt /usr/local/share/vim/vim91/keymap/*.vim; \
+fi
+if test -d ../lang ; then \
+  if test -n "" ; then \
+    lngusr=${LANG%%.*} ; \
+  elif test -n "" ; then \
+    lngusr=${LANGUAGE%%:*} ; \
+  elif test -n "" ; then \
+    lngusr=${LC_MESSAGES%%.*} ; \
+  fi; \
+  if test "$lngusr" = "zh_TW" -o "$lngusr" = "zh_CN" -o "$lngusr" = "pt_BR" ; then \
+    lngusr=`echo $lngusr | tr '[:upper:]' '[:lower:]'` ; \
+  elif test -n "$lngusr" -a "$lngusr" != "C" -a "$lngusr" != "POSIX" ; then \
+    lngusr=${lngusr%%_*} ; \
+  fi ; \
+  if test -f ../lang/README.$lngusr.txt ; then \
+    cp ../lang/README.$lngusr.txt /usr/local/share/vim/vim91 ; \
+    chmod 644 /usr/local/share/vim/vim91/README.$lngusr.txt ; \
+  fi ; \
+  if test -f ../lang/LICENSE.$lngusr.txt ; then \
+    cp ../lang/LICENSE.$lngusr.txt /usr/local/share/vim/vim91 ; \
+    chmod 644 /usr/local/share/vim/vim91/LICENSE.$lngusr.txt ; \
+  fi ; \
+fi
+if test -n "/usr/local/share"; then \
+        /bin/sh install-sh -c -d /usr/local/share/icons/hicolor/48x48/apps /usr/local/share/icons/locolor/32x32/apps \
+        /usr/local/share/icons/locolor/16x16/apps /usr/local/share/applications; \
+fi
+if test -d /usr/local/share/icons/hicolor/48x48/apps -a -w /usr/local/share/icons/hicolor/48x48/apps \
+        -a ! -f /usr/local/share/icons/hicolor/48x48/apps/gvim.png; then \
+   cp ../runtime/vim48x48.png /usr/local/share/icons/hicolor/48x48/apps/gvim.png; \
+   if test -z "" -a -x "" \
+           -a -w /usr/local/share/icons/hicolor \
+           -a -f /usr/local/share/icons/hicolor/index.theme; then \
+         -q /usr/local/share/icons/hicolor; \
+   fi \
+fi
+if test -d /usr/local/share/icons/locolor/32x32/apps -a -w /usr/local/share/icons/locolor/32x32/apps \
+        -a ! -f /usr/local/share/icons/locolor/32x32/apps/gvim.png; then \
+   cp ../runtime/vim32x32.png /usr/local/share/icons/locolor/32x32/apps/gvim.png; \
+fi
+if test -d /usr/local/share/icons/locolor/16x16/apps -a -w /usr/local/share/icons/locolor/16x16/apps \
+        -a ! -f /usr/local/share/icons/locolor/16x16/apps/gvim.png; then \
+   cp ../runtime/vim16x16.png /usr/local/share/icons/locolor/16x16/apps/gvim.png; \
+fi
+if test -d /usr/local/share/applications -a -w /usr/local/share/applications; then \
+   if test -f po/vim.desktop -a -f po/gvim.desktop; then \
+        cp po/vim.desktop po/gvim.desktop \
+                /usr/local/share/applications; \
+   else \
+        cp ../runtime/vim.desktop \
+                ../runtime/gvim.desktop \
+                /usr/local/share/applications; \
+   fi; \
+   if test -z "" -a -x ""; then \
+       -q /usr/local/share/applications; \
+   fi \
+fi
+make[1]: Leaving directory '/usr/src/vim/src'
+root@083f149e7348:/usr/src/vim# 
+logout
