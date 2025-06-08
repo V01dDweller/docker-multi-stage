@@ -1,5 +1,6 @@
 # Stage 1: Build Vim from source
 FROM alpine:latest AS builder
+RUN mkdir -pv /usr/src
 WORKDIR /usr/src
 RUN apk add clang \
             gcc \
