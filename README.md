@@ -29,7 +29,6 @@ COPY --from=builder /usr/local/bin/vim \
                     /usr/local/bin/xxd \
                     /usr/local/bin/
 COPY --from=builder /usr/local/share/vim /usr/local/share/vim
-#WORKDIR /usr/local/share/man/man1
 COPY --from=builder /usr/local/share/man/man1/evim.1 \
                     /usr/local/share/man/man1/vim.1 \
                     /usr/local/share/man/man1/vimdiff.1 \
