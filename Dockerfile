@@ -39,4 +39,9 @@ RUN ln -s vim.1 ex.1 && \
     ln -s vim.1 rview.1 && \
     ln -s vim.1 rvim.1 && \
     ln -s vim.1 view.1
-WORKDIR /root
+RUN adduser -D v01ddweller
+RUN echo "v01ddweller ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/v01ddweller && \
+    chmod 0440 /etc/sudoers.d/v01ddweller && \
+    visudo -c
+USER v01ddweller
+WORKDIR /home/v01ddweller
