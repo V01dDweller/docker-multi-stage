@@ -16,7 +16,7 @@ RUN make install
 
 # Stage 2: Create final image with Vim and dependencies
 FROM alpine:latest
-RUN apk add bash ncurses
+RUN apk add bash ncurses sudo
 COPY --from=builder /usr/local/bin/vim \
                     /usr/local/bin/vimtutor \
                     /usr/local/bin/xxd \
